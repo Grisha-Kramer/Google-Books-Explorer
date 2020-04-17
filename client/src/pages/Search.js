@@ -6,7 +6,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, FormBtn } from "../components/Form";
 
-function Search() {
+const Search = (props) => {
 
     return (
       <Container fluid>
@@ -17,7 +17,7 @@ function Search() {
             </Jumbotron>
             <form>
               <Input
-                onChange={handleInputChange}
+                onChange={props.handleSearch}
                 name="Search"
                 placeholder="Search Books"
               />
