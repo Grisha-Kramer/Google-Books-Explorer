@@ -1,40 +1,26 @@
-import React, { useState, useEffect } from "react";
-import Jumbotron from "../components/Jumbotron";
-import API from "../utils/API";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
-import { Input, FormBtn } from "../components/Form";
+import React, { Component } from "react";
+
 
 const Search = (props) => {
 
     return (
-      <Container fluid>
-        <Row>
-          <Col size="md-6">
-            <Jumbotron>
-              <h1>Google Books Search</h1>
-            </Jumbotron>
-            <form>
-              <Input
-                onChange={props.handleSearch}
-                name="Search"
-                placeholder="Search Books"
-              />
-              <FormBtn
-                disabled={!(formObject.author && formObject.title)}
-                onClick={handleFormSubmit}
-              >
-                Search
-              </FormBtn>
-            </form>
-          </Col>
-          <Col size="md-6 sm-12">
-
-
-          </Col>
-        </Row>
-      </Container>
+      <div className="search-area">
+        <form onSubmit={props.handleSubmit}>
+          <input
+            onChange={props.handleChange}
+            placeholder="Search books"
+            type="text"
+          />
+          <button type="submit">Search</button>
+          <select value={props.sort} onChange={props.handleSort}>
+            <option value="" disabled selected>
+              Sort
+            </option>
+            <option value="Newest">Newest</option>
+            <option value="Oldest">Oldest</option>
+          </select>
+        </form>
+      </div>
     );
   }
 

@@ -1,24 +1,16 @@
-import React, { Component } from 'react'
-import Search from "./pages/Search"
+import React, { Component } from "react"
+import Books from "./pages/Books";
+import Nav from "./components/Nav";
 
-class Books extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      books: [],
-      searchField: ""
-    }
-  }
-
-  handleSearch = (e) => {
-    this.setState({ searchField: e.target.value})
-  }
+class App extends Component {
   render() {
     return (
-      <div>
-        <Search handlesearch={this.handleSearch} />
-
+      <div className="App">
+        <Nav />
+        <Books />
       </div>
-    )
+    );
   }
 }
+
+export default App;
