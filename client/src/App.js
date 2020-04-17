@@ -1,25 +1,15 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Books from "./pages/Books";
-import Nav from "./components/Nav";
-import axios from "axios"
+import React, { Component } from 'react'
+import Search from "./pages/Search"
 
-function App() {
-  return (
-    <Router>
+class Books extends Component {
+  constructor(props) {
+    <s></s>
+  }
+  render() {
+    return (
       <div>
-        <Nav />
-        <Switch>
-          <Route exact path={["/", "/books"]}>
-            <Books />
-          </Route>
-          <Route exact path="/books/:id">
-            <Detail />
-          </Route>
-        </Switch>
+        
       </div>
-    </Router>
-  );
+    )
+  }
 }
-
-export default App;
