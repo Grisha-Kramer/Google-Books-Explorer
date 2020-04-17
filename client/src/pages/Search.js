@@ -12,13 +12,7 @@ const Search = (props) => {
             type="text"
           />
           <button type="submit">Search</button>
-          <select value={props.sort} onChange={props.handleSort}>
-            <option value="" disabled selected>
-              Sort
-            </option>
-            <option value="Newest">Newest</option>
-            <option value="Oldest">Oldest</option>
-          </select>
+
         </form>
       </div>
     );
