@@ -16,9 +16,6 @@ function App() {
           <Route exact path="/books/:id">
             <Detail />
           </Route>
-          <Route>
-            <NoMatch />
-          </Route>
         </Switch>
       </div>
     </Router>
