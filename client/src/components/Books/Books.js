@@ -1,7 +1,7 @@
 import React, { Component } from "react"
-import Search from "./Search"
+import Search from "../../pages/Search"
 import request from "superagent"
-import BookList from "../components/BookList/BookList"
+import BookList from "../BookList/BookList"
 
 class Books extends Component {
   constructor(props){
